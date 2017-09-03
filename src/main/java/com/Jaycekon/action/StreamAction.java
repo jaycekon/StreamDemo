@@ -1,6 +1,7 @@
 package com.Jaycekon.action;
 
 
+import com.Jaycekon.action.model.Trader;
 import com.Jaycekon.action.model.Transaction;
 import com.Jaycekon.action.util.TraderUtil;
 import org.junit.Test;
@@ -52,5 +53,22 @@ public class StreamAction {
                 .collect(Collectors.toSet());
 
         citySet.forEach(System.out::println);
+    }
+
+
+    /**
+     * 找出在剑桥工作的交易员，根据姓名排序
+     */
+    @Test
+    public void actionThree(){
+        List<Trader> traders = list.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> "Cambridge".equals(trader.getCity()))
+                .distinct()
+                .sorted(Comparator.comparing(Trader::getName))
+                .collect(Collectors.toList());
+
+        traders.forEach(System.out::println);
+
     }
 }
