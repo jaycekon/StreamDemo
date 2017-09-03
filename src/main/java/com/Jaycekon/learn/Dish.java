@@ -1,3 +1,5 @@
+package com.Jaycekon.learn;
+
 public class Dish {
     private String name;
     private boolean vegetarian;
