@@ -1,6 +1,7 @@
 package com.Jaycekon.learn;
 
 public class Dish {
+    private int id;
     private String name;
     private boolean vegetarian;
     private int calories;
@@ -8,11 +9,24 @@ public class Dish {
 
     public enum Type {MEAT, FISH, OTHER}
 
+    public Dish(int id) {
+        this.id = id;
+
+    }
+
     public Dish(String name, boolean vegetarian, int calories, Type type) {
         this.name = name;
         this.vegetarian = vegetarian;
         this.calories = calories;
         this.type = type;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -60,7 +60,7 @@ public class StreamAction {
      * 找出在剑桥工作的交易员，根据姓名排序
      */
     @Test
-    public void actionThree(){
+    public void actionThree() {
         List<Trader> traders = list.stream()
                 .map(Transaction::getTrader)
                 .filter(trader -> "Cambridge".equals(trader.getCity()))
@@ -71,4 +71,88 @@ public class StreamAction {
         traders.forEach(System.out::println);
 
     }
+
+
+    /**
+     * 拼接所有联系人的姓名
+     */
+    @Test
+    public void testFour() {
+        //Type 1
+        String result = list.stream()
+                .map(Transaction::getTrader)
+                .distinct()
+                .map(Trader::getName)
+                .sorted()
+                .reduce("", (n1, n2) -> n1 + n2);
+
+        System.out.println(result);
+
+        // Type 2
+        String resultJoin = list.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining());
+
+        System.out.println(resultJoin);
+    }
+
+
+    /**
+     * 判断有没有在米兰工作的交易员
+     */
+    @Test
+    public void testFive() {
+        boolean flag = list.stream()
+                .anyMatch(transaction -> "Milan".equals(transaction.getTrader().getCity()));
+
+
+        System.out.println(flag);
+    }
+
+
+    /**
+     * 返回米兰所有的交易额
+     */
+    @Test
+    public void testSix(){
+        list.stream()
+                .filter(transaction -> "Milan".equals(transaction.getTrader().getCity()))
+                .map(Transaction::getValue)
+                .sorted()
+                .forEach(System.out::println);
+    }
+
+
+    /**
+     * 返回所有最高，最小的经济额
+     */
+    @Test
+    public void testSeven(){
+
+        //Type 1
+        list.stream()
+                .map(Transaction::getValue)
+                .reduce(Integer::max)
+                .ifPresent(System.out::println);
+
+        list.stream()
+                .map((Transaction::getValue))
+                .reduce(Integer::min)
+                .ifPresent(System.out::println);
+
+        //Type 2
+        list.stream()
+                .max(Comparator.comparing(Transaction::getValue))   //返回Transaction 对象
+                .map(Transaction::getValue)
+                .ifPresent(System.out::println);
+
+        list.stream()
+                .min(Comparator.comparing(Transaction::getValue))  //返回Transaction 对象
+                .map(Transaction::getValue)
+                .ifPresent(System.out::println);
+    }
+
+
 }
