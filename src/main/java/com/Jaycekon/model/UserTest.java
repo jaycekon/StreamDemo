@@ -17,5 +17,8 @@ public class UserTest {
                 .setPhone("18814127307");
 
         System.out.println(user.toString());
+
+        user = User.builder().name("asdf").phone("asdfa").sex("dsfa").build();
+        System.out.println(user);
     }
 }
