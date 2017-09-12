@@ -9,6 +9,7 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 
 /**
+ * lombok Test
  * Created by Jaycekon on 2017/9/5.
  */
 
