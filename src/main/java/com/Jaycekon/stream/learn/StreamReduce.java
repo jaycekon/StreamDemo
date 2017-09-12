@@ -1,4 +1,4 @@
-package com.Jaycekon.learn;
+package com.Jaycekon.stream.learn;
 
 import org.junit.Test;
 

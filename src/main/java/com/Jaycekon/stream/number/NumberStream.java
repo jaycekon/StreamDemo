@@ -1,7 +1,7 @@
-package com.Jaycekon.number;
+package com.Jaycekon.stream.number;
 
-import com.Jaycekon.learn.Dish;
-import com.Jaycekon.learn.DishUtil;
+import com.Jaycekon.stream.learn.Dish;
+import com.Jaycekon.stream.learn.DishUtil;
 import org.junit.Test;
 
 import java.util.List;

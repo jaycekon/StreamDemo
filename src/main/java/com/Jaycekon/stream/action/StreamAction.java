@@ -1,9 +1,9 @@
-package com.Jaycekon.action;
+package com.Jaycekon.stream.action;
 
 
-import com.Jaycekon.action.model.Trader;
-import com.Jaycekon.action.model.Transaction;
-import com.Jaycekon.action.util.TraderUtil;
+import com.Jaycekon.stream.action.model.Trader;
+import com.Jaycekon.stream.action.model.Transaction;
+import com.Jaycekon.stream.action.util.TraderUtil;
 import org.junit.Test;
 
 import java.util.Comparator;

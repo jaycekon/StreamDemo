@@ -1,4 +1,4 @@
-package com.Jaycekon.zookeeper;
+package com.Jaycekon.zookeeper.zkClient;
 
 import org.apache.zookeeper.*;
 

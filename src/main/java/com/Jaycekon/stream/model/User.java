@@ -1,4 +1,4 @@
-package com.Jaycekon.model;
+package com.Jaycekon.stream.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

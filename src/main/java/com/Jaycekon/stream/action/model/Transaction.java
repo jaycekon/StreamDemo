@@ -1,4 +1,4 @@
-package com.Jaycekon.action.model;
+package com.Jaycekon.stream.action.model;
 
 public class Transaction {
     private Trader trader;

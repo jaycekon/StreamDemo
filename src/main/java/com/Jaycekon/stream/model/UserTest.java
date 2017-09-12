@@ -1,4 +1,4 @@
-package com.Jaycekon.model;
+package com.Jaycekon.stream.model;
 
 import org.junit.Test;
 

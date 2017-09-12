@@ -1,7 +1,7 @@
-package com.Jaycekon.action.util;
+package com.Jaycekon.stream.action.util;
 
-import com.Jaycekon.action.model.Trader;
-import com.Jaycekon.action.model.Transaction;
+import com.Jaycekon.stream.action.model.Trader;
+import com.Jaycekon.stream.action.model.Transaction;
 
 import java.util.Arrays;
 import java.util.List;

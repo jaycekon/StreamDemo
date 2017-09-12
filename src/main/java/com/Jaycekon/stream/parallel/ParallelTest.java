@@ -1,4 +1,4 @@
-package com.Jaycekon.parallel;
+package com.Jaycekon.stream.parallel;
 
 import org.junit.Test;
 

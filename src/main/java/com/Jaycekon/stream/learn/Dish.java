@@ -1,4 +1,4 @@
-package com.Jaycekon.learn;
+package com.Jaycekon.stream.learn;
 
 public class Dish {
     private int id;

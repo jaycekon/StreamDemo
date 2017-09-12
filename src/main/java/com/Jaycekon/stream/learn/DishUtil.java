@@ -1,4 +1,4 @@
-package com.Jaycekon.learn;
+package com.Jaycekon.stream.learn;
 
 import java.util.Arrays;
 import java.util.List;
