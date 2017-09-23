@@ -12,12 +12,14 @@ import java.util.List;
  */
 public class ListGroup {
 
+    private static final String HOME_URL = "127.0.0.1";
+
     private Logger logger = LoggerFactory.getLogger(ListGroup.class);
 
 
     @Test
     public void list() {
-        ConnectZk zk = new ConnectZk("127.0.0.1");
+        ConnectZk zk = new ConnectZk(HOME_URL);
         try {
             List<String> childs = zk.getZooKeeper().getChildren("/zookeeper", false);
             childs.forEach(System.out::print);
@@ -26,5 +28,19 @@ public class ListGroup {
         } finally {
             zk.close();
         }
+    }
+
+    @Test
+    public void delete() {
+        ConnectZk zk = new ConnectZk(HOME_URL);
+
+        try {
+            zk.getZooKeeper().delete("/test", -1);
+        } catch (Exception e) {
+            logger.error("删除节点失败！：{}", e.getMessage(), e);
+        }finally {
+            zk.close();
+        }
+
     }
 }

@@ -60,4 +60,11 @@ public class Dish {
     public void setType(Type type) {
         this.type = type;
     }
+
+
+    public CaloricLevel getCaloricLevel(){
+        if (this.getCalories() <= 400) return CaloricLevel.DIET;
+        else if (this.getCalories() <= 700) return CaloricLevel.NORMAL;
+        else return CaloricLevel.FAT;
+    }
 }

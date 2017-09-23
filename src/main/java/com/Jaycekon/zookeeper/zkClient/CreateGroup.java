@@ -15,8 +15,9 @@ public class CreateGroup implements Watcher {
     private static final int SESSION_TIMEOUT = 1000;
 
     private CountDownLatch countDownLatch = new CountDownLatch(1);
+
     public void process(WatchedEvent event) {
-        if(event.getState() == Event.KeeperState.SyncConnected){
+        if (event.getState() == Event.KeeperState.SyncConnected) {
             countDownLatch.countDown();//计数器减一
         }
     }
@@ -34,14 +35,13 @@ public class CreateGroup implements Watcher {
     }
 
 
-
     public void close() throws InterruptedException {
-        if(zk != null){
+        if (zk != null) {
             try {
                 zk.close();
             } catch (InterruptedException e) {
                 throw e;
-            }finally{
+            } finally {
                 zk = null;
                 System.gc();
             }
