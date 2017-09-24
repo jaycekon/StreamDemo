@@ -32,6 +32,7 @@ public class Anonymous {
     }
 
 
+    @Test
     public void test2() {
         List<Dish> menu = DishUtil.getDishs();
 
