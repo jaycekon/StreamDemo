@@ -20,6 +20,20 @@
             <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.10</version>
+            <type>pom</type>
+        </dependency>
+
     </dependencies>
 
 

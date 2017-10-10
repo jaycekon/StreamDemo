@@ -4,3 +4,6 @@ src/main/resources/
 src/test/
 target/classes/com/
 target/generated-sources/
+.idea/fileTemplates/
+.idea/sonarlint/
+target/
